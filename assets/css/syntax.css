@@ -11,12 +11,6 @@
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
-@media (prefers-color-scheme: dark) {
-    .highlight {
-        background-color: #1e293b;
-        border-color: #334155;
-    }
-}
 
 .highlight .c { color: #6b7280; font-style: italic } /* Comment */
 .highlight .err { color: #dc2626; background-color: #fef2f2 } /* Error */
@@ -84,68 +78,6 @@
 .highlight .vi { color: #e36209 } /* Name.Variable.Instance */
 .highlight .il { color: #005cc5 } /* Literal.Number.Integer.Long */
 
-/* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-    .highlight .c { color: #8b949e }
-    .highlight .err { color: #f85149 }
-    .highlight .k { color: #ff7b72 }
-    .highlight .o { color: #ff7b72 }
-    .highlight .cm { color: #8b949e }
-    .highlight .cp { color: #ff7b72 }
-    .highlight .c1 { color: #8b949e }
-    .highlight .cs { color: #8b949e }
-    .highlight .gd { color: #f85149; background-color: #490202 }
-    .highlight .gi { color: #56d364; background-color: #0f5323 }
-    .highlight .go { color: #c9d1d9 }
-    .highlight .gp { color: #8b949e }
-    .highlight .gu { color: #d2a8ff }
-    .highlight .gt { color: #f85149 }
-    .highlight .kc { color: #ff7b72 }
-    .highlight .kd { color: #ff7b72 }
-    .highlight .kn { color: #ff7b72 }
-    .highlight .kp { color: #ff7b72 }
-    .highlight .kr { color: #ff7b72 }
-    .highlight .kt { color: #ff7b72 }
-    .highlight .ld { color: #79c0ff }
-    .highlight .m { color: #a5d6ff }
-    .highlight .s { color: #a5d6ff }
-    .highlight .na { color: #7ee83f }
-    .highlight .nb { color: #79c0ff }
-    .highlight .nc { color: #d2a8ff }
-    .highlight .no { color: #79c0ff }
-    .highlight .nd { color: #d2a8ff }
-    .highlight .ni { color: #79c0ff }
-    .highlight .ne { color: #d2a8ff }
-    .highlight .nf { color: #d2a8ff }
-    .highlight .nl { color: #79c0ff }
-    .highlight .nn { color: #d2a8ff }
-    .highlight .nx { color: #7ee83f }
-    .highlight .py { color: #79c0ff }
-    .highlight .nt { color: #7ee83f }
-    .highlight .nv { color: #ffa657 }
-    .highlight .ow { color: #ff7b72 }
-    .highlight .w { color: #6e7681 }
-    .highlight .mf { color: #a5d6ff }
-    .highlight .mh { color: #a5d6ff }
-    .highlight .mi { color: #a5d6ff }
-    .highlight .mo { color: #a5d6ff }
-    .highlight .sb { color: #a5d6ff }
-    .highlight .sc { color: #a5d6ff }
-    .highlight .sd { color: #a5d6ff }
-    .highlight .s2 { color: #a5d6ff }
-    .highlight .se { color: #a5d6ff }
-    .highlight .sh { color: #a5d6ff }
-    .highlight .si { color: #79c0ff }
-    .highlight .sx { color: #a5d6ff }
-    .highlight .sr { color: #a5d6ff }
-    .highlight .s1 { color: #a5d6ff }
-    .highlight .ss { color: #79c0ff }
-    .highlight .bp { color: #79c0ff }
-    .highlight .vc { color: #ffa657 }
-    .highlight .vg { color: #ffa657 }
-    .highlight .vi { color: #ffa657 }
-    .highlight .il { color: #a5d6ff }
-}
 
 /* Line numbers */
 .highlight .lineno {
@@ -157,9 +89,3 @@
     user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-    .highlight .lineno {
-        color: #64748b;
-        border-right-color: #334155;
-    }
-}
