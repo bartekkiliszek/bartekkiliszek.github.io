@@ -2,8 +2,8 @@
 /* Based on GitHub's syntax highlighting theme */
 
 .highlight {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
     padding: 1rem;
     overflow: auto;
@@ -18,14 +18,14 @@
     }
 }
 
-.highlight .c { color: #64748b; font-style: italic } /* Comment */
+.highlight .c { color: #6b7280; font-style: italic } /* Comment */
 .highlight .err { color: #dc2626; background-color: #fef2f2 } /* Error */
-.highlight .k { color: #0066cc; font-weight: bold } /* Keyword */
-.highlight .o { color: #0066cc } /* Operator */
-.highlight .cm { color: #64748b; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #0066cc; font-weight: bold } /* Comment.Preproc */
-.highlight .c1 { color: #64748b; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #64748b; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .k { color: #10b981; font-weight: bold } /* Keyword */
+.highlight .o { color: #10b981 } /* Operator */
+.highlight .cm { color: #6b7280; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #10b981; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #6b7280; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #6b7280; font-weight: bold; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #b31d28; background-color: #ffeef0 } /* Generic.Deleted */
 .highlight .gd .x { color: #b31d28; background-color: #ffeef0 } /* Generic.Deleted.Specific */
 .highlight .ge { font-style: italic } /* Generic.Emph */
@@ -48,11 +48,11 @@
 .highlight .m { color: #005cc5 } /* Literal.Number */
 .highlight .s { color: #059669 } /* Literal.String */
 .highlight .na { color: #059669 } /* Name.Attribute */
-.highlight .nb { color: #0066cc } /* Name.Builtin */
+.highlight .nb { color: #10b981 } /* Name.Builtin */
 .highlight .nc { color: #7c3aed; font-weight: bold } /* Name.Class */
-.highlight .no { color: #0066cc } /* Name.Constant */
+.highlight .no { color: #10b981 } /* Name.Constant */
 .highlight .nd { color: #7c3aed; font-weight: bold } /* Name.Decorator */
-.highlight .ni { color: #0066cc } /* Name.Entity */
+.highlight .ni { color: #10b981 } /* Name.Entity */
 .highlight .ne { color: #7c3aed; font-weight: bold } /* Name.Exception */
 .highlight .nf { color: #7c3aed; font-weight: bold } /* Name.Function */
 .highlight .nl { color: #005cc5 } /* Name.Label */
@@ -149,11 +149,11 @@
 
 /* Line numbers */
 .highlight .lineno {
-    color: #94a3b8;
+    color: #9ca3af;
     display: inline-block;
     padding-right: 1rem;
     margin-right: 1rem;
-    border-right: 1px solid #e2e8f0;
+    border-right: 1px solid #e5e7eb;
     user-select: none;
 }
 
