@@ -1,0 +1,70 @@
+# Site settings
+title: Bartek Kiliszek
+email:
+description: >-
+  A blog about backend development, Java, and software engineering.
+  Sharing my journey and insights in the world of programming.
+baseurl: ""
+url: "https://bartekkiliszek.github.io"
+twitter_username: bartekkiliszek
+github_username: bartekkiliszek
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Permalink settings
+permalink: /blog/:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Bartek Kiliszek"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .idea/
+
+# Pagination (if you want to add it later)
+# paginate: 5
+# paginate_path: "/page:num/"
+
+# Google Analytics (add your tracking ID when ready)
+# google_analytics: UA-XXXXXXXXX-X
