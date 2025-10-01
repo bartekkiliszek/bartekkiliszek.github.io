@@ -31,8 +31,7 @@ I started this blog to:
 
 Beyond coding, I'm interested in:
 - Software architecture and design patterns
-- Performance optimization
-- Open source contribution
+- Leveraging LLMs (like Claude) as learning companions and development tools - exploring how AI can enhance the learning process and boost productivity in software development
 - Continuous learning and improvement
 
 ## Get In Touch
