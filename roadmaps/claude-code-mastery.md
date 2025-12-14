@@ -42,8 +42,8 @@ Claude Code is an agentic coding tool that runs in your terminal. Unlike traditi
 ### 1.2 Installation and Setup
 
 **Official documentation (START HERE):**
-- [Claude Code Overview](https://docs.anthropic.com/en/docs/claude-code/overview)
-- [Setup Guide](https://docs.anthropic.com/en/docs/claude-code/setup)
+- [Claude Code Overview](https://docs.anthropic.com/en/docs/claude-code/overview){:target="_blank"}
+- [Setup Guide](https://docs.anthropic.com/en/docs/claude-code/setup){:target="_blank"}
 
 **Installation steps:**
 ```bash
@@ -91,15 +91,15 @@ claude
 
 ### Progress Checklist
 
-- [ ] Read [Claude Code Overview](https://docs.anthropic.com/en/docs/claude-code/overview)
-- [ ] Read [Quickstart Guide](https://docs.anthropic.com/en/docs/claude-code/quickstart)
+- [ ] Read [Claude Code Overview](https://docs.anthropic.com/en/docs/claude-code/overview){:target="_blank"}
+- [ ] Read [Quickstart Guide](https://docs.anthropic.com/en/docs/claude-code/quickstart){:target="_blank"}
 - [ ] Install Claude Code
 - [ ] Run `claude doctor` successfully
 - [ ] Practice basic slash commands
-- [ ] Read [Cooking with Claude Code - Sid Bharath](https://www.siddharthbharath.com/claude-code-the-complete-guide/)
-- [ ] Read [Getting Started - Quick Guide](https://fuszti.com/claude-code-setup-guide-2025/)
-- [ ] Read [Builder.io - Best Tips](https://www.builder.io/blog/claude-code)
-- [ ] Watch [Anthropic YouTube videos](https://www.youtube.com/@anthropic-ai)
+- [ ] Read [Cooking with Claude Code - Sid Bharath](https://www.siddharthbharath.com/claude-code-the-complete-guide/){:target="_blank"}
+- [ ] Read [Getting Started - Quick Guide](https://fuszti.com/claude-code-setup-guide-2025/){:target="_blank"}
+- [ ] Read [Builder.io - Best Tips](https://www.builder.io/blog/claude-code){:target="_blank"}
+- [ ] Watch [Anthropic YouTube videos](https://www.youtube.com/@anthropic-ai){:target="_blank"}
 
 ---
 
@@ -207,14 +207,14 @@ CLAUDE.md is the most important file - it's automatically included in the contex
 
 ### Progress Checklist
 
-- [ ] Read [Using CLAUDE.md Files](https://www.claude.com/blog/using-claude-md-files)
-- [ ] Read [Configuration Guide](https://docs.anthropic.com/en/docs/claude-code/settings)
+- [ ] Read [Using CLAUDE.md Files](https://www.claude.com/blog/using-claude-md-files){:target="_blank"}
+- [ ] Read [Configuration Guide](https://docs.anthropic.com/en/docs/claude-code/settings){:target="_blank"}
 - [ ] Create CLAUDE.md for a project using `/init`
 - [ ] Customize CLAUDE.md with project-specific info
 - [ ] Set up settings.json with permissions
-- [ ] Read [ClaudeLog - Configuration](https://claudelog.com/configuration/)
-- [ ] Read [Shipyard Cheatsheet](https://shipyard.build/blog/claude-code-cheat-sheet/)
-- [ ] Review [centminmod/my-claude-code-setup](https://github.com/centminmod/my-claude-code-setup) template
+- [ ] Read [ClaudeLog - Configuration](https://claudelog.com/configuration/){:target="_blank"}
+- [ ] Read [Shipyard Cheatsheet](https://shipyard.build/blog/claude-code-cheat-sheet/){:target="_blank"}
+- [ ] Review [centminmod/my-claude-code-setup](https://github.com/centminmod/my-claude-code-setup){:target="_blank"} template
 
 ---
 
@@ -310,15 +310,15 @@ to support OAuth2 alongside existing JWT auth
 
 ### Progress Checklist
 
-- [ ] Read [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) - **MUST READ!**
-- [ ] Read [Common Workflows](https://docs.anthropic.com/en/docs/claude-code/common-workflows)
+- [ ] Read [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices){:target="_blank"} - **MUST READ!**
+- [ ] Read [Common Workflows](https://docs.anthropic.com/en/docs/claude-code/common-workflows){:target="_blank"}
 - [ ] Practice extended thinking with "think hard" prompts
 - [ ] Complete a Plan → Code → Test cycle
 - [ ] Try TDD workflow with Claude
 - [ ] Master `/clear` and `/compact` usage
-- [ ] Read [Ultimate AI Coding Guide - Sabrina](https://www.sabrina.dev/p/ultimate-ai-coding-guide-claude-code)
-- [ ] Read [ClaudeLog Best Practices](https://claudelog.com/)
-- [ ] Read [NikiforovAll - Usage Best Practices](https://nikiforovall.blog/productivity/2025/06/13/claude-code-rules.html)
+- [ ] Read [Ultimate AI Coding Guide - Sabrina](https://www.sabrina.dev/p/ultimate-ai-coding-guide-claude-code){:target="_blank"}
+- [ ] Read [ClaudeLog Best Practices](https://claudelog.com/){:target="_blank"}
+- [ ] Read [NikiforovAll - Usage Best Practices](https://nikiforovall.blog/productivity/2025/06/13/claude-code-rules.html){:target="_blank"}
 
 ---
 
@@ -403,13 +403,13 @@ For every MAJOR code change, verify:
 
 ### Progress Checklist
 
-- [ ] Read [Custom Commands Tutorial](https://docs.anthropic.com/en/docs/claude-code/tutorials#create-custom-slash-commands)
+- [ ] Read [Custom Commands Tutorial](https://docs.anthropic.com/en/docs/claude-code/tutorials#create-custom-slash-commands){:target="_blank"}
 - [ ] Create first custom command
 - [ ] Set up `fix-github-issue.md` command
 - [ ] Set up `review.md` command
 - [ ] Create project-specific workflow commands
-- [ ] Review [zebbern/claude-code-guide](https://github.com/zebbern/claude-code-guide) cheatsheet
-- [ ] Read [htdocs.dev - Best Practices](https://htdocs.dev/posts/claude-code-best-practices-and-pro-tips/)
+- [ ] Review [zebbern/claude-code-guide](https://github.com/zebbern/claude-code-guide){:target="_blank"} cheatsheet
+- [ ] Read [htdocs.dev - Best Practices](https://htdocs.dev/posts/claude-code-best-practices-and-pro-tips/){:target="_blank"}
 
 ---
 
@@ -498,15 +498,15 @@ if __name__ == "__main__":
 
 ### Progress Checklist
 
-- [ ] Read [Model Context Protocol](https://modelcontextprotocol.io/)
-- [ ] Read [MCP Quickstart](https://modelcontextprotocol.io/quickstart)
-- [ ] Browse [MCP Servers Gallery](https://modelcontextprotocol.io/servers)
+- [ ] Read [Model Context Protocol](https://modelcontextprotocol.io/){:target="_blank"}
+- [ ] Read [MCP Quickstart](https://modelcontextprotocol.io/quickstart){:target="_blank"}
+- [ ] Browse [MCP Servers Gallery](https://modelcontextprotocol.io/servers){:target="_blank"}
 - [ ] Configure first MCP server (GitHub recommended)
 - [ ] Test MCP server integration
-- [ ] Read [Codecademy - MCP Tutorial](https://www.codecademy.com/article/how-to-use-model-context-protocol-mcp-with-claude-step-by-step-guide-with-examples)
-- [ ] Read [DataCamp - MCP Demo Project](https://www.datacamp.com/tutorial/mcp-model-context-protocol)
-- [ ] Read [MCPcat Guide](https://mcpcat.io/guides/adding-an-mcp-server-to-claude-code/)
-- [ ] Explore [claube.ai - MCP Directory](https://www.claube.ai/)
+- [ ] Read [Codecademy - MCP Tutorial](https://www.codecademy.com/article/how-to-use-model-context-protocol-mcp-with-claude-step-by-step-guide-with-examples){:target="_blank"}
+- [ ] Read [DataCamp - MCP Demo Project](https://www.datacamp.com/tutorial/mcp-model-context-protocol){:target="_blank"}
+- [ ] Read [MCPcat Guide](https://mcpcat.io/guides/adding-an-mcp-server-to-claude-code/){:target="_blank"}
+- [ ] Explore [claube.ai - MCP Directory](https://www.claube.ai/){:target="_blank"}
 - [ ] Try creating a custom MCP server
 
 ---
@@ -622,15 +622,15 @@ if any(d in command for d in dangerous):
 
 ### Progress Checklist
 
-- [ ] Read [Hooks Reference](https://docs.claude.com/en/docs/claude-code/hooks)
-- [ ] Read [Hooks Getting Started](https://code.claude.com/docs/en/hooks-guide)
+- [ ] Read [Hooks Reference](https://docs.claude.com/en/docs/claude-code/hooks){:target="_blank"}
+- [ ] Read [Hooks Getting Started](https://code.claude.com/docs/en/hooks-guide){:target="_blank"}
 - [ ] Set up auto-formatting hook
 - [ ] Set up auto-test hook
 - [ ] Create a command validation hook
-- [ ] Read [ClaudeLog - Hooks](https://claudelog.com/mechanics/hooks/)
-- [ ] Read [GitButler - Claude Code Hooks](https://blog.gitbutler.com/automate-your-ai-workflows-with-claude-code-hooks)
-- [ ] Review [disler/claude-code-hooks-mastery](https://github.com/disler/claude-code-hooks-mastery)
-- [ ] Read [Apidog - Hooks Guide](https://apidog.com/blog/claude-code-hooks/)
+- [ ] Read [ClaudeLog - Hooks](https://claudelog.com/mechanics/hooks/){:target="_blank"}
+- [ ] Read [GitButler - Claude Code Hooks](https://blog.gitbutler.com/automate-your-ai-workflows-with-claude-code-hooks){:target="_blank"}
+- [ ] Review [disler/claude-code-hooks-mastery](https://github.com/disler/claude-code-hooks-mastery){:target="_blank"}
+- [ ] Read [Apidog - Hooks Guide](https://apidog.com/blog/claude-code-hooks/){:target="_blank"}
 
 ---
 
@@ -733,18 +733,18 @@ Each agent works in an isolated worktree, producing different implementations of
 
 ### Progress Checklist
 
-- [ ] Read [Subagents Documentation](https://code.claude.com/docs/en/sub-agents)
-- [ ] Read [Building Agents with Claude Agent SDK](https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk)
+- [ ] Read [Subagents Documentation](https://code.claude.com/docs/en/sub-agents){:target="_blank"}
+- [ ] Read [Building Agents with Claude Agent SDK](https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk){:target="_blank"}
 - [ ] Create first sub-agent
 - [ ] Test parallel exploration with multiple agents
 - [ ] Set up code-reviewer sub-agent
 - [ ] Try Git worktrees parallelization
-- [ ] Read [How to Use Subagents - Zach Wills](https://zachwills.net/how-to-use-claude-code-subagents-to-parallelize-development/)
-- [ ] Read [Subagent Deep Dive - Code Centre](https://cuong.io/blog/2025/06/24-claude-code-subagent-deep-dive)
-- [ ] Read [Parallel AI Coding](https://docs.agentinterviews.com/blog/parallel-ai-coding-with-gitworktrees/)
-- [ ] Read [AI Native Dev - Parallelizing Agents](https://ainativedev.io/news/how-to-parallelize-ai-coding-agents)
-- [ ] Read [Multi-Agent Orchestration](https://dev.to/bredmond1019/multi-agent-orchestration-running-10-claude-instances-in-parallel-part-3-29da)
-- [ ] Read [ClaudeLog - Task Agent Tools](https://claudelog.com/mechanics/task-agent-tools/)
+- [ ] Read [How to Use Subagents - Zach Wills](https://zachwills.net/how-to-use-claude-code-subagents-to-parallelize-development/){:target="_blank"}
+- [ ] Read [Subagent Deep Dive - Code Centre](https://cuong.io/blog/2025/06/24-claude-code-subagent-deep-dive){:target="_blank"}
+- [ ] Read [Parallel AI Coding](https://docs.agentinterviews.com/blog/parallel-ai-coding-with-gitworktrees/){:target="_blank"}
+- [ ] Read [AI Native Dev - Parallelizing Agents](https://ainativedev.io/news/how-to-parallelize-ai-coding-agents){:target="_blank"}
+- [ ] Read [Multi-Agent Orchestration](https://dev.to/bredmond1019/multi-agent-orchestration-running-10-claude-instances-in-parallel-part-3-29da){:target="_blank"}
+- [ ] Read [ClaudeLog - Task Agent Tools](https://claudelog.com/mechanics/task-agent-tools/){:target="_blank"}
 
 ---
 
@@ -817,14 +817,14 @@ Each agent works in an isolated worktree, producing different implementations of
 
 ### Progress Checklist
 
-- [ ] Read [Code Modernization](https://www.claude.com/solutions/code-modernization)
+- [ ] Read [Code Modernization](https://www.claude.com/solutions/code-modernization){:target="_blank"}
 - [ ] Practice `/init` on an unfamiliar codebase
 - [ ] Build iterative CLAUDE.md from exploration
 - [ ] Complete incremental refactoring exercise
 - [ ] Try code modernization task
-- [ ] Read [Refactoring Large Projects](https://codenotary.com/blog/using-claude-code-and-aider-to-refactor-large-projects-enhancing-maintainability-and-scalability)
-- [ ] Read [How to Use Claude Code for Refactoring](https://www.arsturn.com/blog/how-to-use-claude-code-to-refactor-and-clean-up-your-codebase)
-- [ ] Read [Refactoring with Claude - Case Study](https://medium.com/@jbelis/refactoring-with-claude-b690a364d2f0)
+- [ ] Read [Refactoring Large Projects](https://codenotary.com/blog/using-claude-code-and-aider-to-refactor-large-projects-enhancing-maintainability-and-scalability){:target="_blank"}
+- [ ] Read [How to Use Claude Code for Refactoring](https://www.arsturn.com/blog/how-to-use-claude-code-to-refactor-and-clean-up-your-codebase){:target="_blank"}
+- [ ] Read [Refactoring with Claude - Case Study](https://medium.com/@jbelis/refactoring-with-claude-b690a364d2f0){:target="_blank"}
 
 ---
 
@@ -901,14 +901,14 @@ repos:
 
 ### Progress Checklist
 
-- [ ] Read [CLI Reference](https://docs.anthropic.com/en/docs/claude-code/cli-reference)
-- [ ] Read [CI/CD Integration](https://docs.anthropic.com/en/docs/claude-code/ci-cd)
-- [ ] Read [GitHub Integration](https://docs.anthropic.com/en/docs/claude-code/github)
+- [ ] Read [CLI Reference](https://docs.anthropic.com/en/docs/claude-code/cli-reference){:target="_blank"}
+- [ ] Read [CI/CD Integration](https://docs.anthropic.com/en/docs/claude-code/ci-cd){:target="_blank"}
+- [ ] Read [GitHub Integration](https://docs.anthropic.com/en/docs/claude-code/github){:target="_blank"}
 - [ ] Try headless mode with `-p` flag
 - [ ] Set up Claude in a GitHub Action
 - [ ] Configure pre-commit hook with Claude
 - [ ] Set up automated PR reviews
-- [ ] Review [Claude Code Best Practices - CI section](https://www.anthropic.com/engineering/claude-code-best-practices)
+- [ ] Review [Claude Code Best Practices - CI section](https://www.anthropic.com/engineering/claude-code-best-practices){:target="_blank"}
 
 ---
 
@@ -970,15 +970,15 @@ https://claude.com/code
 
 ### Progress Checklist
 
-- [ ] Read [Claude Code on the Web](https://www.anthropic.com/news/claude-code-on-the-web)
-- [ ] Read [VS Code Extension docs](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code)
-- [ ] Read [Security Documentation](https://docs.anthropic.com/en/docs/claude-code/security)
+- [ ] Read [Claude Code on the Web](https://www.anthropic.com/news/claude-code-on-the-web){:target="_blank"}
+- [ ] Read [VS Code Extension docs](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code){:target="_blank"}
+- [ ] Read [Security Documentation](https://docs.anthropic.com/en/docs/claude-code/security){:target="_blank"}
 - [ ] Optimize token usage with aggressive `/clear`
 - [ ] Try multi-model workflow
 - [ ] Set up Docker-based sandbox
 - [ ] Try VS Code extension
-- [ ] Read [Simon Willison's Notes](https://simonwillison.net/2025/Apr/19/claude-code-best-practices/)
-- [ ] Read [Vibe Coding Hub - Claude Code Review](https://vibecodinghub.org/tools/claude-code)
+- [ ] Read [Simon Willison's Notes](https://simonwillison.net/2025/Apr/19/claude-code-best-practices/){:target="_blank"}
+- [ ] Read [Vibe Coding Hub - Claude Code Review](https://vibecodinghub.org/tools/claude-code){:target="_blank"}
 
 ---
 
@@ -988,20 +988,20 @@ https://claude.com/code
 
 | Resource | Link |
 |----------|------|
-| Claude Code Docs | [docs.anthropic.com/en/docs/claude-code/overview](https://docs.anthropic.com/en/docs/claude-code/overview) |
-| Claude Code Blog | [anthropic.com/engineering](https://www.anthropic.com/engineering) |
-| GitHub Repo | [github.com/anthropics/claude-code](https://github.com/anthropics/claude-code) |
-| MCP Protocol | [modelcontextprotocol.io](https://modelcontextprotocol.io/) |
-| Release Notes | [docs.anthropic.com/en/docs/claude-code/release-notes](https://docs.anthropic.com/en/docs/claude-code/release-notes) |
+| Claude Code Docs | [docs.anthropic.com/en/docs/claude-code/overview](https://docs.anthropic.com/en/docs/claude-code/overview){:target="_blank"} |
+| Claude Code Blog | [anthropic.com/engineering](https://www.anthropic.com/engineering){:target="_blank"} |
+| GitHub Repo | [github.com/anthropics/claude-code](https://github.com/anthropics/claude-code){:target="_blank"} |
+| MCP Protocol | [modelcontextprotocol.io](https://modelcontextprotocol.io/){:target="_blank"} |
+| Release Notes | [docs.anthropic.com/en/docs/claude-code/release-notes](https://docs.anthropic.com/en/docs/claude-code/release-notes){:target="_blank"} |
 
 ### Community Resources
 
 | Resource | Link | Description |
 |----------|------|-------------|
-| ClaudeLog | [claudelog.com](https://claudelog.com/) | Best practices, mechanics, guides |
-| r/ClaudeAI | [reddit.com/r/ClaudeAI](https://reddit.com/r/ClaudeAI) | Reddit community |
-| zebbern/claude-code-guide | [GitHub](https://github.com/zebbern/claude-code-guide) | Comprehensive cheatsheet |
-| centminmod/my-claude-code-setup | [GitHub](https://github.com/centminmod/my-claude-code-setup) | Starter template |
+| ClaudeLog | [claudelog.com](https://claudelog.com/){:target="_blank"} | Best practices, mechanics, guides |
+| r/ClaudeAI | [reddit.com/r/ClaudeAI](https://reddit.com/r/ClaudeAI){:target="_blank"} | Reddit community |
+| zebbern/claude-code-guide | [GitHub](https://github.com/zebbern/claude-code-guide){:target="_blank"} | Comprehensive cheatsheet |
+| centminmod/my-claude-code-setup | [GitHub](https://github.com/centminmod/my-claude-code-setup){:target="_blank"} | Starter template |
 
 ### Video Resources
 
