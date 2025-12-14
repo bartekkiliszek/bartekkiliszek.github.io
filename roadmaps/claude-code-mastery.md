@@ -4,8 +4,6 @@ title: Claude Code Mastery Roadmap
 permalink: /roadmaps/claude-code/
 ---
 
-# Claude Code Mastery Roadmap
-
 A comprehensive course from fundamentals to advanced techniques.
 
 **Progress Legend:** `- [ ]` = Not started | `- [x]` = Completed
