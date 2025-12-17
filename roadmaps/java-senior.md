@@ -4,10 +4,10 @@ title: "Roadmap: Java Senior → Staff Engineer"
 permalink: /roadmaps/java-senior/
 ---
 
-**Format:** Series of focused sprints (4-8 weeks each)
-**Philosophy:** One topic → One resource → One project → Verification
-**Starting point:** 4 years of Java/Spring experience
-**Goal:** Senior/Staff Engineer specializing in Real-Time Trading Systems
+**Format:** Series of focused sprints (4-8 weeks each)  
+**Philosophy:** One topic → One resource → One project → Verification  
+**Starting point:** 4 years of Java/Spring experience  
+**Goal:** Senior/Staff Engineer specializing in Real-Time Trading Systems  
 
 **Progress Legend:** `- [ ]` = Not started | `- [x]` = Completed
 
