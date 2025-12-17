@@ -9,7 +9,7 @@ permalink: /roadmaps/java-senior/
 **Starting point:** 4 years of Java/Spring experience  
 **Goal:** Senior/Staff Engineer specializing in Real-Time Trading Systems  
 
-**Progress Legend:** `- [ ]` = Not started | `- [x]` = Completed
+**Progress Legend:** ☐ = Not started | ☑ = Completed
 
 ---
 
@@ -98,10 +98,10 @@ Design and implement REST API for "Mini Feed Service":
 - Propose a fix if you find a problem
 
 **Verification:**
-- [ ] I can explain the difference between 400, 404, 422, and 500
-- [ ] I know when to use PUT vs PATCH vs POST
-- [ ] I understand what idempotency is and why it matters
-- [ ] I know headers: Content-Type, Accept, Cache-Control, ETag
+- ☐ I can explain the difference between 400, 404, 422, and 500
+- ☐ I know when to use PUT vs PATCH vs POST
+- ☐ I understand what idempotency is and why it matters
+- ☐ I know headers: Content-Type, Accept, Cache-Control, ETag
 
 ---
 
@@ -119,20 +119,23 @@ Design and implement REST API for "Mini Feed Service":
 **Project:**
 Write a client for an external API (e.g., public sports API or mock):
 
-**Layer 1 – Basics:**
+#### Layer 1 – Basics
+
 - HTTP client (WebClient/OkHttp)
 - Request/response mapping (DTO)
 - HTTP error handling (4xx, 5xx)
 - Timeout configuration (connect, read, write)
 - Request and response logging
 
-**Layer 2 – Resilience:**
+#### Layer 2 – Resilience
+
 - Retry with exponential backoff
 - Circuit breaker (Resilience4j)
 - Fallback (cache, default response)
 - Rate limiting (if API has limits)
 
-**Layer 3 – Production-ready:**
+#### Layer 3 – Production-ready
+
 - Health check endpoint for provider
 - Metrics (request count, latency, error rate)
 - Externalized configuration (URL, timeouts, retry policy)
@@ -142,12 +145,12 @@ Write a client for an external API (e.g., public sports API or mock):
 - Add metrics to existing client
 
 **Verification:**
-- [ ] My client doesn't crash when API doesn't respond
-- [ ] Retry works with backoff (I don't bombard the API)
-- [ ] Circuit breaker opens on too many errors
-- [ ] I have metrics showing integration health
-- [ ] Configuration is external (I can change without recompile)
-- [ ] I can explain every design decision
+- ☐ My client doesn't crash when API doesn't respond
+- ☐ Retry works with backoff (I don't bombard the API)
+- ☐ Circuit breaker opens on too many errors
+- ☐ I have metrics showing integration health
+- ☐ Configuration is external (I can change without recompile)
+- ☐ I can explain every design decision
 
 ---
 
@@ -165,23 +168,27 @@ Write a client for an external API (e.g., public sports API or mock):
 **Project:**
 Extend the client from previous sprint:
 
-**Data handling:**
+#### Data handling
+
 - Pagination handling (automatic fetching of all pages)
 - Delta/incremental sync (fetching only changes)
 - ETag/If-None-Match for cache validation
 - Compression (gzip)
 
-**Authentication:**
+#### Authentication
+
 - API key management
 - OAuth2 token refresh
 - Token caching and expiry handling
 
-**Advanced scenarios:**
+#### Advanced scenarios
+
 - Bulk operations (batch requests)
 - Long polling (if API supports)
 - Webhook receiver (reverse integration)
 
-**Architecture:**
+#### Architecture
+
 - Adapter pattern (isolating API from domain)
 - Data normalization to internal model
 - Testing with WireMock
@@ -190,11 +197,11 @@ Extend the client from previous sprint:
 - Implement one advanced pattern in your project
 
 **Verification:**
-- [ ] I can handle paginated API
-- [ ] I know how to do incremental sync
-- [ ] I understand adapter pattern and use it
-- [ ] My external DTOs are separated from domain model
-- [ ] I have tests with WireMock
+- ☐ I can handle paginated API
+- ☐ I know how to do incremental sync
+- ☐ I understand adapter pattern and use it
+- ☐ My external DTOs are separated from domain model
+- ☐ I have tests with WireMock
 
 ---
 
@@ -212,26 +219,30 @@ Extend the client from previous sprint:
 **Project:**
 WebSocket client for feed provider (or mock):
 
-**Connection management:**
+#### Connection management
+
 - Connect with authentication
 - Automatic reconnection with backoff
 - Heartbeat/ping-pong handling
 - Connection state machine (CONNECTING, CONNECTED, RECONNECTING, DISCONNECTED)
 - Graceful shutdown
 
-**Message handling:**
+#### Message handling
+
 - Message parsing (JSON/binary)
 - Message ordering and sequence numbers
 - Duplicate detection
 - Backpressure (when messages arrive faster than you process)
 
-**Resilience:**
+#### Resilience
+
 - Connection timeout
 - Stale connection detection (no messages for X seconds)
 - Fallback to REST polling
 - Multiple server endpoints (failover)
 
-**Stale Data Detection (CRITICAL):**
+#### Stale Data Detection (CRITICAL)
+
 ```
 The most dangerous thing is not an error (disconnect), but a "frozen" feed:
 - Connection looks OK
@@ -244,7 +255,8 @@ The most dangerous thing is not an error (disconnect), but a "frozen" feed:
 - Dashboard showing "freshness" of each feed
 - Automatic switch to backup provider on stale data
 
-**Observability:**
+#### Observability
+
 - Metrics: messages/sec, latency, reconnections
 - Metric: `feed_last_update_seconds` (time since last message)
 - Connection state logging
@@ -256,13 +268,13 @@ The most dangerous thing is not an error (disconnect), but a "frozen" feed:
 - Add stale data monitoring to existing integrations
 
 **Verification:**
-- [ ] My client reconnects automatically
-- [ ] I handle heartbeat/ping-pong
-- [ ] I have state machine for connection lifecycle
-- [ ] I detect stale connection (no data for X seconds)
-- [ ] I have alert for "frozen" feed
-- [ ] I have metrics showing connection health
-- [ ] I can distinguish "no data" from "silence because nothing is happening"
+- ☐ My client reconnects automatically
+- ☐ I handle heartbeat/ping-pong
+- ☐ I have state machine for connection lifecycle
+- ☐ I detect stale connection (no data for X seconds)
+- ☐ I have alert for "frozen" feed
+- ☐ I have metrics showing connection health
+- ☐ I can distinguish "no data" from "silence because nothing is happening"
 
 ---
 
@@ -280,25 +292,29 @@ The most dangerous thing is not an error (disconnect), but a "frozen" feed:
 **Project:**
 RabbitMQ consumer for feed events:
 
-**Basics:**
+#### Basics
+
 - Connection and channel management
 - Queue declaration and binding
 - Message consumption
 - Manual acknowledgment
 
-**Reliability:**
+#### Reliability
+
 - Ack modes (auto, manual, reject, nack)
 - Prefetch count (how many messages at once)
 - Dead Letter Queue (DLQ)
 - Retry with backoff (via DLQ or plugin)
 - Poison message handling
 
-**Performance:**
+#### Performance
+
 - Batch consumption
 - Concurrent consumers
 - Connection pooling
 
-**Production:**
+#### Production
+
 - Health check
 - Metrics (messages/sec, queue depth, consumer lag)
 - Graceful shutdown (finish processing)
@@ -307,11 +323,11 @@ RabbitMQ consumer for feed events:
 - Apply in existing RabbitMQ integration
 
 **Verification:**
-- [ ] I understand the difference between ack, nack, reject
-- [ ] I know how to configure prefetch
-- [ ] I have DLQ for failed messages
-- [ ] I can handle poison message
-- [ ] I have metrics for queue depth and consumer lag
+- ☐ I understand the difference between ack, nack, reject
+- ☐ I know how to configure prefetch
+- ☐ I have DLQ for failed messages
+- ☐ I can handle poison message
+- ☐ I have metrics for queue depth and consumer lag
 
 ---
 
@@ -328,7 +344,8 @@ RabbitMQ consumer for feed events:
 **Project:**
 Redesign integration layer for "Mini Feed Service":
 
-**Architecture:**
+#### Architecture
+
 ```
 ┌─────────────────────────────────────────────┐
 │                  Domain                      │
@@ -351,7 +368,8 @@ Redesign integration layer for "Mini Feed Service":
    └─────────┘    └───────────┘    └───────────┘
 ```
 
-**Patterns to implement:**
+#### Patterns to implement
+
 - **Adapter Pattern** – each provider behind common interface
 - **Normalizer** – different formats → one domain model
 - **Content Enricher** – enriching data from multiple sources
@@ -359,7 +377,8 @@ Redesign integration layer for "Mini Feed Service":
 - **Provider Fallback** – when main provider fails, use backup
 - **Provider Health** – monitoring health of each provider
 
-**Testing:**
+#### Testing
+
 - Contract tests for each adapter
 - Integration tests with mocks
 - Failover tests
@@ -369,11 +388,11 @@ Redesign integration layer for "Mini Feed Service":
 - Propose refactor to cleaner architecture
 
 **Verification:**
-- [ ] I have common interface for all providers
-- [ ] Adding new provider doesn't require domain changes
-- [ ] I have fallback between providers
-- [ ] Each adapter is testable in isolation
-- [ ] I can explain architecture to new team member
+- ☐ I have common interface for all providers
+- ☐ Adding new provider doesn't require domain changes
+- ☐ I have fallback between providers
+- ☐ Each adapter is testable in isolation
+- ☐ I can explain architecture to new team member
 
 ---
 
@@ -391,7 +410,8 @@ Redesign integration layer for "Mini Feed Service":
 **Project:**
 Conflict resolution system for multi-provider setup:
 
-**Domain Mapping:**
+#### Domain Mapping
+
 ```
 Problem: Provider A calls market "1X2"
          Provider B calls same market "Match Winner"
@@ -399,12 +419,14 @@ Problem: Provider A calls market "1X2"
 
 Solution: Mapping table + your internal standard
 ```
+
 - Mapping table: external_id → internal_id
 - Handling new/unknown identifiers
 - Fuzzy matching for names (e.g., "Real Madrid" vs "Real Madrid CF")
 - Mapping versioning (when provider changes naming)
 
-**Master Provider Logic:**
+#### Master Provider Logic
+
 ```
 Problem: Provider A says: match LIVE
          Provider B says: match FINISHED
@@ -412,19 +434,22 @@ Problem: Provider A says: match LIVE
 
 Solution: Provider hierarchy + business rules
 ```
+
 - Provider priority configuration per event type
 - Rules: "if main provider sends FINISHED, ignore LIVE from others"
 - Override rules (e.g., "for this league Provider B is better")
 - Audit log: "used data from Provider A, ignored Provider B"
 
-**Conflict Resolution Strategies:**
+#### Conflict Resolution Strategies
+
 - **Latest wins** – take newest timestamp
 - **Priority wins** – take from provider with higher priority
 - **Best value** – take better odds (for odds)
 - **Consensus** – take value when >= 2 providers agree
 - **Manual review** – flag for manual verification
 
-**State Management:**
+#### State Management
+
 ```
 Event State Machine:
 PREMATCH → LIVE → HALFTIME → LIVE → FINISHED → SETTLED
@@ -439,12 +464,12 @@ Rules:
 - Propose improvements
 
 **Verification:**
-- [ ] I have mapping table for identifiers
-- [ ] I understand how to handle unknown identifier from provider
-- [ ] I have defined provider hierarchy
-- [ ] I can explain what happens when providers disagree
-- [ ] I have audit log of "which provider won" decisions
-- [ ] I understand state machine for events and don't revert states
+- ☐ I have mapping table for identifiers
+- ☐ I understand how to handle unknown identifier from provider
+- ☐ I have defined provider hierarchy
+- ☐ I can explain what happens when providers disagree
+- ☐ I have audit log of "which provider won" decisions
+- ☐ I understand state machine for events and don't revert states
 
 ---
 
@@ -461,7 +486,8 @@ Rules:
 **Project:**
 Implementation of advanced patterns:
 
-**Resequencer (CRITICAL for real-time):**
+#### Resequencer (CRITICAL for real-time)
+
 ```
 Problem: Packets arrive out of order
          Packet 3: "Goal scored"
@@ -470,44 +496,52 @@ Problem: Packets arrive out of order
 
 Solution: Buffer + sorting by sequence number/timestamp
 ```
+
 - Buffer for out-of-order messages
 - Timeout: "wait max 500ms for missing packets"
 - Gap detection: "missing packet #5, have #4 and #6"
 - Release strategy: when to release from buffer
 
-**Splitter:**
+#### Splitter
+
 ```
 Problem: Provider sends one batch with 50 matches
 
 Solution: Split into 50 separate messages
 ```
+
 - Splitting batch messages into individual
 - Preserving context (correlation ID)
 - Parallel processing after split
 - Error handling: what when 1 of 50 fails
 
-**Wire Tap (debugging):**
+#### Wire Tap (debugging)
+
 ```
 Problem: "Why did system show wrong match result?"
 
 Solution: Copy ALL raw messages to archive
 ```
+
 - Copying raw messages without affecting main flow
 - Archive for debugging
 - Retention policy (how long to keep)
 - Search: "show all messages for match X from day Y"
 
-**Content Enricher:**
+#### Content Enricher
+
 ```
 Problem: Provider sends only team_id: 123
 
 Solution: Pull name, logo, colors from database
 ```
+
 - Cache for enrichment data
 - Fallback when enrichment fails
 - Async vs sync enrichment
 
-**Process Manager:**
+#### Process Manager
+
 ```
 Problem: Sequence of actions dependent on state
          "If Provider A suspends market, check B,
@@ -515,17 +549,20 @@ Problem: Sequence of actions dependent on state
 
 Solution: State machine for complex processes
 ```
+
 - Defining processes as state machines
 - State persistence (what if restart mid-process)
 - Timeout handling
 - Compensation actions
 
-**Idempotency:**
+#### Idempotency
+
 ```
 Problem: Same event can arrive 2x (retry, duplicate from provider)
 
 Solution: Deduplication + idempotent processing
 ```
+
 - Message deduplication (by ID + timestamp)
 - Idempotent handlers (processing 2x = same effect)
 - Deduplication window (how long to remember)
@@ -535,12 +572,12 @@ Solution: Deduplication + idempotent processing
 - Add Wire Tap for debugging
 
 **Verification:**
-- [ ] I have resequencer for out-of-order messages
-- [ ] I can split batch into individual messages (splitter)
-- [ ] I have Wire Tap for archiving raw messages
-- [ ] I can enrich message with additional data (enricher)
-- [ ] I understand idempotency and have deduplication
-- [ ] I can diagnose problem using archived messages
+- ☐ I have resequencer for out-of-order messages
+- ☐ I can split batch into individual messages (splitter)
+- ☐ I have Wire Tap for archiving raw messages
+- ☐ I can enrich message with additional data (enricher)
+- ☐ I understand idempotency and have deduplication
+- ☐ I can diagnose problem using archived messages
 
 ---
 
@@ -558,24 +595,28 @@ Solution: Deduplication + idempotent processing
 **Project:**
 Test suite for integration layer:
 
-**Contract Testing (WireMock):**
+#### Contract Testing (WireMock)
+
 - Mock each external API
 - Happy path tests
 - Error scenario tests (4xx, 5xx, timeout)
 - Edge case tests (empty response, malformed JSON)
 
-**Integration Testing (Testcontainers):**
+#### Integration Testing (Testcontainers)
+
 - RabbitMQ in container
 - Full flow tests
 - Connection failure and recovery tests
 
-**Resilience Testing:**
+#### Resilience Testing
+
 - Test retry behavior
 - Test circuit breaker opening/closing
 - Test fallback activation
 - Test graceful degradation
 
-**Chaos Testing (basics):**
+#### Chaos Testing (basics)
+
 - Simulate network latency
 - Simulate connection drop
 - Simulate partial failure
@@ -584,10 +625,10 @@ Test suite for integration layer:
 - Add WireMock tests to your integration
 
 **Verification:**
-- [ ] I have tests for happy path and error scenarios
-- [ ] Tests don't require real external API
-- [ ] I test retry and circuit breaker
-- [ ] I can simulate failure in test
+- ☐ I have tests for happy path and error scenarios
+- ☐ Tests don't require real external API
+- ☐ I test retry and circuit breaker
+- ☐ I can simulate failure in test
 
 ---
 
@@ -604,32 +645,37 @@ Test suite for integration layer:
 
 **Project:**
 
-**Reconciliation (State synchronization):**
+#### Reconciliation (State synchronization)
+
 ```
 Problem: Your local state can drift from provider state
          (missed messages, bugs, network issues)
 
 Solution: Periodic comparison and repair
 ```
+
 - Full sync endpoint: "give me everything again"
 - Delta sync: "give me changes since timestamp X"
 - Scheduled reconciliation (e.g., every hour)
 - On-demand reconciliation ("sync now" button)
 - Reconciliation report: "found 5 differences, fixed 3"
 
-**Graceful Degradation:**
+#### Graceful Degradation
+
 ```
 Problem: Provider is unavailable
          What do you show the user?
 
 Solution: Fallback hierarchy
 ```
+
 - **Level 1:** Use backup provider
 - **Level 2:** Use cached data (marked as "stale")
 - **Level 3:** Hide section/show "temporarily unavailable"
 - **Level 4:** Show static fallback
 
-**Data Freshness Indicators:**
+#### Data Freshness Indicators
+
 ```java
 class EventData {
     Event event;
@@ -638,11 +684,13 @@ class EventData {
     FreshnessStatus status; // LIVE, STALE, UNKNOWN
 }
 ```
+
 - Marking data age
 - UI indicator: "last updated 30 seconds ago"
 - Alert on stale data (for operators)
 
-**Self-Healing:**
+#### Self-Healing
+
 - Automatic switching to backup
 - Automatic retry after time
 - Automatic restoration of main provider when it returns
@@ -652,11 +700,11 @@ class EventData {
 - Propose degradation strategy
 
 **Verification:**
-- [ ] I have reconciliation job that compares state
-- [ ] System works (degraded) when main provider is unavailable
-- [ ] User knows data might be stale (UI indicator)
-- [ ] System automatically returns to normal state
-- [ ] I have alerts for stale data and degraded mode
+- ☐ I have reconciliation job that compares state
+- ☐ System works (degraded) when main provider is unavailable
+- ☐ User knows data might be stale (UI indicator)
+- ☐ System automatically returns to normal state
+- ☐ I have alerts for stale data and degraded mode
 
 ---
 
@@ -684,10 +732,10 @@ Add database layer to "Mini Feed Service":
 - Propose index or refactor
 
 **Verification:**
-- [ ] I can read EXPLAIN and point where the problem is
-- [ ] I understand difference between Seq Scan and Index Scan
-- [ ] I know what covering index is and when to use it
-- [ ] I understand N+1 problem and how to avoid it
+- ☐ I can read EXPLAIN and point where the problem is
+- ☐ I understand difference between Seq Scan and Index Scan
+- ☐ I know what covering index is and when to use it
+- ☐ I understand N+1 problem and how to avoid it
 
 ---
 
@@ -716,9 +764,9 @@ For each:
 - Check what isolation level you use by default
 
 **Verification:**
-- [ ] I can explain difference between READ COMMITTED and SERIALIZABLE
-- [ ] I know when to use SELECT FOR UPDATE
-- [ ] I understand difference between optimistic and pessimistic locking
+- ☐ I can explain difference between READ COMMITTED and SERIALIZABLE
+- ☐ I know when to use SELECT FOR UPDATE
+- ☐ I understand difference between optimistic and pessimistic locking
 
 ---
 
@@ -743,9 +791,9 @@ Add Redis to "Mini Feed Service":
 - Analyze key structure in project
 
 **Verification:**
-- [ ] I know difference between STRING, HASH, LIST, SET, SORTED SET
-- [ ] I can design key structure
-- [ ] I understand TTL
+- ☐ I know difference between STRING, HASH, LIST, SET, SORTED SET
+- ☐ I can design key structure
+- ☐ I understand TTL
 
 ---
 
@@ -771,9 +819,9 @@ Document comparing cache-aside vs read-through vs write-through.
 - Measure hit ratio of your cache
 
 **Verification:**
-- [ ] I can explain different cache strategies
-- [ ] I know how to handle cache invalidation
-- [ ] I understand "thundering herd" problem
+- ☐ I can explain different cache strategies
+- ☐ I know how to handle cache invalidation
+- ☐ I understand "thundering herd" problem
 
 ---
 
@@ -802,10 +850,10 @@ Rules:
 - Use TDD for next task
 
 **Verification:**
-- [ ] I can work in Red → Green → Refactor cycle
-- [ ] My tests are fast (<100ms each)
-- [ ] Tests document behavior, not implementation
-- [ ] I feel comfortable writing test before code
+- ☐ I can work in Red → Green → Refactor cycle
+- ☐ My tests are fast (<100ms each)
+- ☐ Tests document behavior, not implementation
+- ☐ I feel comfortable writing test before code
 
 ---
 
@@ -829,9 +877,9 @@ Review and refactor existing tests:
 - Review 5 random tests in project
 
 **Verification:**
-- [ ] My tests are readable without looking at production code
-- [ ] I know what test double is and when to use mock vs stub vs fake
-- [ ] I don't test implementation, only behavior
+- ☐ My tests are readable without looking at production code
+- ☐ I know what test double is and when to use mock vs stub vs fake
+- ☐ I don't test implementation, only behavior
 
 ---
 
@@ -855,8 +903,8 @@ Integration tests for "Mini Feed Service":
 - Add integration test to existing service
 
 **Verification:**
-- [ ] Tests work locally and in CI
-- [ ] I know how to isolate tests
+- ☐ Tests work locally and in CI
+- ☐ I know how to isolate tests
 
 ---
 
@@ -880,9 +928,9 @@ Structured logging in "Mini Feed Service":
 - Review logs from last incident
 
 **Verification:**
-- [ ] My logs are in JSON with consistent fields
-- [ ] I can trace request across multiple services
-- [ ] I don't log sensitive data
+- ☐ My logs are in JSON with consistent fields
+- ☐ I can trace request across multiple services
+- ☐ I don't log sensitive data
 
 ---
 
@@ -908,9 +956,9 @@ Metrics for "Mini Feed Service":
 - Check what metrics your service exposes
 
 **Verification:**
-- [ ] I understand counter vs gauge vs histogram
-- [ ] I know why p99 > average
-- [ ] I can create dashboard
+- ☐ I understand counter vs gauge vs histogram
+- ☐ I know why p99 > average
+- ☐ I can create dashboard
 
 ---
 
@@ -928,14 +976,16 @@ Metrics for "Mini Feed Service":
 **Project:**
 Kafka in "Mini Feed Service":
 
-**Basics:**
+#### Basics
+
 - Producer publishing events
 - Consumer with manual ack
 - Consumer group
 - DLQ for failed messages
 - Schema Registry + Avro (optional)
 
-**Event Ordering (CRITICAL):**
+#### Event Ordering (CRITICAL)
+
 ```
 Problem: "Match Started" must be BEFORE "Goal Scored"
          But Kafka guarantees order only in ONE partition
@@ -943,7 +993,8 @@ Problem: "Match Started" must be BEFORE "Goal Scored"
 Solution: Partitioning strategy
 ```
 
-**Partitioning Strategy:**
+#### Partitioning Strategy
+
 ```java
 // Option 1: Partition by event_id (all events for one match in one partition)
 producer.send(new ProducerRecord<>("feed", eventId, message));
@@ -953,16 +1004,19 @@ producer.send(new ProducerRecord<>("feed", providerId, message));
 
 // Option 3: Custom partitioner (e.g., by sport + league)
 ```
+
 - Trade-off: more partitions = better parallelism, but harder ordering
 - Single partition per event = guaranteed order, but bottleneck
 - Document decision in ADR
 
-**Exactly-once vs At-least-once:**
+#### Exactly-once vs At-least-once
+
 - When "at-least-once" is enough (idempotent consumer)
 - When you need "exactly-once" (Kafka transactions)
 - Cost of exactly-once (performance)
 
-**Late Events:**
+#### Late Events
+
 ```
 Problem: Event arrives with 5 minute delay
          (e.g., provider had problem and sent from backlog)
@@ -979,12 +1033,12 @@ Solution:
 - Is event ordering preserved?
 
 **Verification:**
-- [ ] I understand partition, offset, consumer group
-- [ ] I know how to configure retry and DLQ
-- [ ] I can diagnose consumer lag
-- [ ] I understand how partitioning affects ordering
-- [ ] I can choose partitioning strategy for my use case
-- [ ] I know how to handle late events
+- ☐ I understand partition, offset, consumer group
+- ☐ I know how to configure retry and DLQ
+- ☐ I can diagnose consumer lag
+- ☐ I understand how partitioning affects ordering
+- ☐ I can choose partitioning strategy for my use case
+- ☐ I know how to handle late events
 
 ---
 
@@ -1011,9 +1065,9 @@ Examples demonstrating:
 - Immutable objects
 
 **Verification:**
-- [ ] I understand visibility and volatile
-- [ ] I know what happens-before is
-- [ ] I can identify race condition
+- ☐ I understand visibility and volatile
+- ☐ I know what happens-before is
+- ☐ I can identify race condition
 
 ---
 
@@ -1034,9 +1088,9 @@ Thread-safe cache with different strategies:
 - Benchmark each version
 
 **Verification:**
-- [ ] I know when to use synchronized vs Lock
-- [ ] I understand ReadWriteLock
-- [ ] I can identify contention point
+- ☐ I know when to use synchronized vs Lock
+- ☐ I understand ReadWriteLock
+- ☐ I can identify contention point
 
 ---
 
@@ -1056,8 +1110,8 @@ Implementation comparison:
 - CopyOnWriteArrayList
 
 **Verification:**
-- [ ] I know when to use which collection
-- [ ] I understand CAS in ConcurrentHashMap
+- ☐ I know when to use which collection
+- ☐ I understand CAS in ConcurrentHashMap
 
 ---
 
@@ -1078,9 +1132,9 @@ Asynchronous processing in "Mini Feed Service":
 - Metrics
 
 **Verification:**
-- [ ] I can configure ThreadPoolExecutor
-- [ ] I know how to size the pool
-- [ ] I understand rejection strategies
+- ☐ I can configure ThreadPoolExecutor
+- ☐ I know how to size the pool
+- ☐ I understand rejection strategies
 
 ---
 
@@ -1101,9 +1155,9 @@ Asynchronous flow:
 - Handle errors and timeouts
 
 **Verification:**
-- [ ] I understand thenApply vs thenCompose
-- [ ] I can handle errors in async flow
-- [ ] I know how to set timeout
+- ☐ I understand thenApply vs thenCompose
+- ☐ I can handle errors in async flow
+- ☐ I know how to set timeout
 
 ---
 
@@ -1123,9 +1177,9 @@ Comparison of Virtual Threads with platform threads:
 - Migration of existing code
 
 **Verification:**
-- [ ] I understand difference between platform and virtual threads
-- [ ] I know limitations (pinning)
-- [ ] I know when they give advantage
+- ☐ I understand difference between platform and virtual threads
+- ☐ I know limitations (pinning)
+- ☐ I know when they give advantage
 
 ---
 
@@ -1145,9 +1199,9 @@ GC analysis:
 - Experiment with heap size
 
 **Verification:**
-- [ ] I understand G1 phases
-- [ ] I can read GC logs
-- [ ] I know what allocation rate means
+- ☐ I understand G1 phases
+- ☐ I can read GC logs
+- ☐ I know what allocation rate means
 
 ---
 
@@ -1170,9 +1224,9 @@ Profile "Mini Feed Service":
 Optimize one found spot.
 
 **Verification:**
-- [ ] I can run profiler
-- [ ] I can read flame graphs
-- [ ] I can identify hotspot
+- ☐ I can run profiler
+- ☐ I can read flame graphs
+- ☐ I can identify hotspot
 
 ---
 
@@ -1192,9 +1246,9 @@ JVM configuration experiments:
 - Benchmark different configurations
 
 **Verification:**
-- [ ] I know how to size heap
-- [ ] I understand difference G1 vs ZGC
-- [ ] I know when not to tune
+- ☐ I know how to size heap
+- ☐ I understand difference G1 vs ZGC
+- ☐ I know when not to tune
 
 ---
 
@@ -1216,9 +1270,9 @@ Deep dive:
 - Connection pooling
 
 **Verification:**
-- [ ] I understand auto-configuration
-- [ ] I know how Spring proxy works
-- [ ] I understand propagation in @Transactional
+- ☐ I understand auto-configuration
+- ☐ I know how Spring proxy works
+- ☐ I understand propagation in @Transactional
 
 ---
 
@@ -1238,9 +1292,9 @@ Lock-free implementations:
 - Benchmark vs locks
 
 **Verification:**
-- [ ] I understand CAS
-- [ ] I know when lock-free wins
-- [ ] I understand ABA problem
+- ☐ I understand CAS
+- ☐ I know when lock-free wins
+- ☐ I understand ABA problem
 
 ---
 
@@ -1260,9 +1314,9 @@ Part of service on reactive:
 - Comparison with imperative
 
 **Verification:**
-- [ ] I understand backpressure
-- [ ] I can debug reactive code
-- [ ] I know when it makes sense
+- ☐ I understand backpressure
+- ☐ I can debug reactive code
+- ☐ I know when it makes sense
 
 ---
 
@@ -1286,9 +1340,9 @@ Part of service on reactive:
 CLI tool: fetches events from API, displays in table.
 
 **Verification:**
-- [ ] I know basic syntax
-- [ ] I understand slice vs array
-- [ ] I can define structs
+- ☐ I know basic syntax
+- ☐ I understand slice vs array
+- ☐ I can define structs
 
 ---
 
@@ -1309,8 +1363,8 @@ CLI extension:
 - Documentation (godoc)
 
 **Verification:**
-- [ ] I understand "errors are values"
-- [ ] My code passes go vet and golint
+- ☐ I understand "errors are values"
+- ☐ My code passes go vet and golint
 
 ---
 
@@ -1334,9 +1388,9 @@ Implementation in Go:
 Use case: odds cache (key: eventId+marketId, value: odds)
 
 **Verification:**
-- [ ] I understand how hashing works
-- [ ] I know how to handle collisions
-- [ ] I understand complexity O(1) average, O(n) worst
+- ☐ I understand how hashing works
+- ☐ I know how to handle collisions
+- ☐ I understand complexity O(1) average, O(n) worst
 
 ---
 
@@ -1359,9 +1413,9 @@ Implementation in Go:
 Use case: processing events by priority (e.g., live events > prematch)
 
 **Verification:**
-- [ ] I understand heap structure
-- [ ] I know when to use priority queue
-- [ ] I can use container/heap
+- ☐ I understand heap structure
+- ☐ I know when to use priority queue
+- ☐ I can use container/heap
 
 ---
 
@@ -1385,9 +1439,9 @@ LRU Cache in Go:
 Use case: cache of recently used events/markets in memory
 
 **Verification:**
-- [ ] I understand why hash map + linked list is needed
-- [ ] My implementation is O(1)
-- [ ] I can explain trade-offs vs other strategies (LFU, FIFO)
+- ☐ I understand why hash map + linked list is needed
+- ☐ My implementation is O(1)
+- ☐ I can explain trade-offs vs other strategies (LFU, FIFO)
 
 ---
 
@@ -1408,9 +1462,9 @@ Feed processor:
 - Pipeline pattern
 
 **Verification:**
-- [ ] I understand buffered vs unbuffered channel
-- [ ] I can use select
-- [ ] I can implement worker pool
+- ☐ I understand buffered vs unbuffered channel
+- ☐ I can use select
+- ☐ I can implement worker pool
 
 ---
 
@@ -1431,8 +1485,8 @@ Feed processor extension:
 - Graceful cancellation
 
 **Verification:**
-- [ ] I understand context.Background vs TODO
-- [ ] I can set timeout
+- ☐ I understand context.Background vs TODO
+- ☐ I can set timeout
 
 ---
 
@@ -1454,9 +1508,9 @@ Feed processor extension:
 - Graceful shutdown
 
 **Verification:**
-- [ ] I can write HTTP server in Go
-- [ ] I understand middleware pattern
-- [ ] I can do graceful shutdown
+- ☐ I can write HTTP server in Go
+- ☐ I understand middleware pattern
+- ☐ I can do graceful shutdown
 
 ---
 
@@ -1476,8 +1530,8 @@ Tests for "Feed Ingestor":
 - Benchmark tests
 
 **Verification:**
-- [ ] I write table-driven tests
-- [ ] I can benchmark
+- ☐ I write table-driven tests
+- ☐ I can benchmark
 
 ---
 
@@ -1498,8 +1552,8 @@ Tests for "Feed Ingestor":
 - Documentation
 
 **Verification:**
-- [ ] Service works in container
-- [ ] I can profile it (pprof)
+- ☐ Service works in container
+- ☐ I can profile it (pprof)
 
 ---
 
@@ -1519,8 +1573,8 @@ CLI tools:
 3. `feed-diff` – provider comparison
 
 **Verification:**
-- [ ] My tools have sensible --help
-- [ ] They are useful at work
+- ☐ My tools have sensible --help
+- ☐ They are useful at work
 
 ---
 
@@ -1547,8 +1601,8 @@ Identify and implement:
 - Wire Tap (for monitoring)
 
 **Verification:**
-- [ ] I can recognize pattern in existing code
-- [ ] I know when to use which
+- ☐ I can recognize pattern in existing code
+- ☐ I know when to use which
 
 ---
 
@@ -1569,9 +1623,9 @@ Inter-service communication via gRPC:
 - Streaming
 
 **Verification:**
-- [ ] I can define .proto
-- [ ] I understand streaming in gRPC
-- [ ] I know when gRPC vs REST
+- ☐ I can define .proto
+- ☐ I understand streaming in gRPC
+- ☐ I know when gRPC vs REST
 
 ---
 
@@ -1593,9 +1647,9 @@ Event-driven fragment of system:
 - Event flow diagrams
 
 **Verification:**
-- [ ] I understand events vs commands vs queries
-- [ ] I can design event schema
-- [ ] I understand eventual consistency
+- ☐ I understand events vs commands vs queries
+- ☐ I can design event schema
+- ☐ I understand eventual consistency
 
 ---
 
@@ -1616,8 +1670,8 @@ CQRS for part of system:
 - Synchronization
 
 **Verification:**
-- [ ] I understand command/query separation
-- [ ] I know when NOT to use CQRS
+- ☐ I understand command/query separation
+- ☐ I know when NOT to use CQRS
 
 ---
 
@@ -1639,8 +1693,8 @@ Event-sourced aggregate:
 - Projections
 
 **Verification:**
-- [ ] I understand state vs event sourcing
-- [ ] I can do replay
+- ☐ I understand state vs event sourcing
+- ☐ I can do replay
 
 ---
 
@@ -1663,9 +1717,9 @@ Resilience in "Feed Ingestor":
 - Chaos testing
 
 **Verification:**
-- [ ] I understand Circuit Breaker
-- [ ] I can configure retry with backoff
-- [ ] I can test resilience
+- ☐ I understand Circuit Breaker
+- ☐ I can configure retry with backoff
+- ☐ I can test resilience
 
 ---
 
@@ -1685,9 +1739,9 @@ Consistency analysis in your system:
 - Document with trade-offs
 
 **Verification:**
-- [ ] I understand CAP theorem
-- [ ] I can explain consistency models
-- [ ] I know where strong is required
+- ☐ I understand CAP theorem
+- ☐ I can explain consistency models
+- ☐ I know where strong is required
 
 ---
 
@@ -1707,8 +1761,8 @@ Failure mode analysis for feed pipeline:
 - How to detect, fix, prevent
 
 **Verification:**
-- [ ] I can predict behavior on failure
-- [ ] I know how to design for failure
+- ☐ I can predict behavior on failure
+- ☐ I know how to design for failure
 
 ---
 
@@ -1729,9 +1783,9 @@ Multi-region architecture for feed platform:
 - Failover mechanism
 
 **Verification:**
-- [ ] I understand active-active vs passive
-- [ ] I know how to replicate data
-- [ ] I can design failover
+- ☐ I understand active-active vs passive
+- ☐ I know how to replicate data
+- ☐ I can design failover
 
 ---
 
@@ -1751,8 +1805,8 @@ Multi-tenant for betting platform:
 - Configuration per tenant
 
 **Verification:**
-- [ ] I understand model trade-offs
-- [ ] I know how to isolate tenants
+- ☐ I understand model trade-offs
+- ☐ I know how to isolate tenants
 
 ---
 
@@ -1772,9 +1826,9 @@ Design 3 systems:
 3. Live odds distribution
 
 **Verification:**
-- [ ] I can gather requirements
-- [ ] I can draw high-level architecture
-- [ ] I can discuss trade-offs
+- ☐ I can gather requirements
+- ☐ I can draw high-level architecture
+- ☐ I can discuss trade-offs
 
 ---
 
@@ -1798,9 +1852,9 @@ Deep dive:
 Write document explaining internals for team.
 
 **Verification:**
-- [ ] I understand how Kafka persists data
-- [ ] I know how replication works
-- [ ] I can explain compaction
+- ☐ I understand how Kafka persists data
+- ☐ I know how replication works
+- ☐ I can explain compaction
 
 ---
 
@@ -1827,8 +1881,8 @@ Hot path analysis in feed handler:
 - Optimize
 
 **Verification:**
-- [ ] I can identify hot path
-- [ ] I understand slow path separation
+- ☐ I can identify hot path
+- ☐ I understand slow path separation
 
 ---
 
@@ -1848,9 +1902,9 @@ Migration to ZGC:
 - Tuning
 
 **Verification:**
-- [ ] I understand how ZGC works
-- [ ] I can configure ZGC
-- [ ] I know when ZGC > G1
+- ☐ I understand how ZGC works
+- ☐ I can configure ZGC
+- ☐ I know when ZGC > G1
 
 ---
 
@@ -1871,9 +1925,9 @@ Off-heap cache:
 - Comparison with on-heap
 
 **Verification:**
-- [ ] I understand heap vs off-heap
-- [ ] I can use ByteBuffer
-- [ ] I understand trade-offs
+- ☐ I understand heap vs off-heap
+- ☐ I can use ByteBuffer
+- ☐ I understand trade-offs
 
 ---
 
@@ -1894,9 +1948,9 @@ Feed handler with Chronicle Queue:
 - Replay
 
 **Verification:**
-- [ ] I can use Chronicle Queue
-- [ ] I understand how it works (mmap)
-- [ ] I can do replay
+- ☐ I can use Chronicle Queue
+- ☐ I understand how it works (mmap)
+- ☐ I can do replay
 
 ---
 
@@ -1918,9 +1972,9 @@ Feed handler with Disruptor:
 - Benchmark
 
 **Verification:**
-- [ ] I understand Ring Buffer
-- [ ] I can configure Disruptor
-- [ ] I understand wait strategies
+- ☐ I understand Ring Buffer
+- ☐ I can configure Disruptor
+- ☐ I understand wait strategies
 
 ---
 
@@ -1942,9 +1996,9 @@ Feed events with SBE:
 - Benchmark vs JSON, Protobuf
 
 **Verification:**
-- [ ] I can define SBE schema
-- [ ] I understand zero-copy
-- [ ] I know when SBE vs Protobuf
+- ☐ I can define SBE schema
+- ☐ I understand zero-copy
+- ☐ I know when SBE vs Protobuf
 
 ---
 
@@ -1966,9 +2020,9 @@ Zero-allocation feed handler:
 - Verification with allocation profiler
 
 **Verification:**
-- [ ] I can identify allocation hotspots
-- [ ] I know how to use object pooling
-- [ ] I can write code without allocations on hot path
+- ☐ I can identify allocation hotspots
+- ☐ I know how to use object pooling
+- ☐ I can write code without allocations on hot path
 
 ---
 
@@ -1990,8 +2044,8 @@ Network optimization:
 - Benchmark
 
 **Verification:**
-- [ ] I understand Nagle's algorithm
-- [ ] I know how to tune socket buffers
+- ☐ I understand Nagle's algorithm
+- ☐ I know how to tune socket buffers
 
 ---
 
@@ -2012,8 +2066,8 @@ POC with Aeron:
 - Comparison with TCP, Kafka
 
 **Verification:**
-- [ ] I understand how Aeron works
-- [ ] I know when to use it
+- ☐ I understand how Aeron works
+- ☐ I know when to use it
 
 ---
 
@@ -2034,8 +2088,8 @@ Deterministic feed handler:
 - Test: 2x same input = identical output
 
 **Verification:**
-- [ ] I understand why determinism matters
-- [ ] I can design deterministic system
+- ☐ I understand why determinism matters
+- ☐ I can design deterministic system
 
 ---
 
@@ -2056,9 +2110,9 @@ Benchmarks:
 - Queues
 
 **Verification:**
-- [ ] I can write correct JMH benchmark
-- [ ] I understand warmup and dead code elimination
-- [ ] I know how to interpret results
+- ☐ I can write correct JMH benchmark
+- ☐ I understand warmup and dead code elimination
+- ☐ I know how to interpret results
 
 ---
 
@@ -2079,8 +2133,8 @@ Benchmarks:
 Target: p99 < 1ms
 
 **Verification:**
-- [ ] I built system with p99 < 1ms
-- [ ] I can explain every decision
+- ☐ I built system with p99 < 1ms
+- ☐ I can explain every decision
 
 ---
 
@@ -2102,8 +2156,8 @@ Target: p99 < 1ms
 - Introduce process
 
 **Verification:**
-- [ ] Team uses ADRs
-- [ ] Decisions are easy to find
+- ☐ Team uses ADRs
+- ☐ Decisions are easy to find
 
 ---
 
@@ -2119,8 +2173,8 @@ Target: p99 < 1ms
 - Gather feedback
 
 **Verification:**
-- [ ] I can lead design review
-- [ ] I give constructive feedback
+- ☐ I can lead design review
+- ☐ I give constructive feedback
 
 ---
 
@@ -2139,8 +2193,8 @@ Target: p99 < 1ms
 - Regular 1:1s
 
 **Verification:**
-- [ ] Mentee makes progress
-- [ ] I give actionable feedback
+- ☐ Mentee makes progress
+- ☐ I give actionable feedback
 
 ---
 
@@ -2162,9 +2216,9 @@ SLO for feed platform:
 - Dashboard
 
 **Verification:**
-- [ ] I have defined SLOs
-- [ ] We have SLO-based alerting
-- [ ] Team understands error budgets
+- ☐ I have defined SLOs
+- ☐ We have SLO-based alerting
+- ☐ Team understands error budgets
 
 ---
 
@@ -2180,8 +2234,8 @@ SLO for feed platform:
 - Guide through review
 
 **Verification:**
-- [ ] We have working RFC process
-- [ ] Large changes go through RFC
+- ☐ We have working RFC process
+- ☐ Large changes go through RFC
 
 ---
 
@@ -2202,8 +2256,8 @@ Technical roadmap (12 months):
 - Initiatives
 
 **Verification:**
-- [ ] I have clear vision of target state
-- [ ] Stakeholder buy-in
+- ☐ I have clear vision of target state
+- ☐ Stakeholder buy-in
 
 ---
 
@@ -2219,8 +2273,8 @@ Technical roadmap (12 months):
 - Establish communication channels
 
 **Verification:**
-- [ ] I have clear contracts
-- [ ] Communication is effective
+- ☐ I have clear contracts
+- ☐ Communication is effective
 
 ---
 
@@ -2241,9 +2295,9 @@ Technical roadmap (12 months):
 - Conduct postmortem
 
 **Verification:**
-- [ ] We have working incident process
-- [ ] Postmortems are blameless
-- [ ] Team learns from incidents
+- ☐ We have working incident process
+- ☐ Postmortems are blameless
+- ☐ Team learns from incidents
 
 ---
 
@@ -2260,8 +2314,8 @@ Choose 1-2:
 - Open source contribution
 
 **Verification:**
-- [ ] I have published content
-- [ ] I'm building network
+- ☐ I have published content
+- ☐ I'm building network
 
 ---
 
